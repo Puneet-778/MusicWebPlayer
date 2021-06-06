@@ -1,0 +1,202 @@
+<!DOCTYPE html Access-Control-Allow-Origin: *>
+<html lang="en" Access-Control-Allow-Origin: *>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Spomtify</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-container menu">
+        <div class="title">
+          <div class="title-content">
+            <img class="title-logo" src="/icons/90530-[Converted].png" alt="" />
+            <div class="title-text">
+              <div id="geek">GEEK</div>
+              <div id="music">MUSIC</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-items-container">
+          <div class="menu-list">
+            <div class="menu-item selected">
+              <span class="material-icons"> home </span>&nbsp&nbsp Home
+            </div>
+            <div class="menu-item">
+              <span class="material-icons"> search </span>&nbsp&nbsp Browse
+            </div>
+            <div id="fav" class="menu-item">
+              <span class="material-icons"> favorite_border </span>&nbsp&nbsp
+              Favorite
+            </div>
+            <div class="menu-item">
+              <span class="material-icons"> queue_music </span>&nbsp&nbsp
+              Playlists
+            </div>
+            <div class="playlist-box" style="display: none;">
+              <div class="playlist-box-title">PLAYLISTS</div>
+              <div class="playlist-box-content" >
+                <!-- <div class="playlist-menu-name">MY Playlist</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="title-footer">
+          <div class="create-playlist-btn">Create Playlist</div>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="nav-bar">
+          <div class="search-bar" contenteditable="true" data-placeholder="Search by song or artist"></div>
+        </div>
+        <div class="songs-container">      
+          <div class="banner">
+            <!-- <div class="search-bar" contenteditable="true" data-placeholder="Search"></div>         -->
+            <div class="banner-text">
+              <div class="banner-text-head">GROOVE INTO</div>
+              <div class="banner-text-body">YOUR FAVORITE SONG</div>
+            </div>
+            <div class='gradient'></div>
+            <!----- carousal start ----->
+            <div id="slider" class="carousal">
+              <div class='image-container'>
+                <img src="/cover/3.jpg" alt="">
+                <img src="/cover/2.jpg" alt="">
+                <img src="/cover/1.jpg" alt="">
+                <img src="/cover/4.jpg" alt="">
+                <img src="/cover/5.jpg" alt="">
+                <img src="/cover/3.jpg" alt="">
+              </div>
+            </div>
+            <!----- carousal end ----->
+          </div>
+          <div class="songs-table-header">
+            <!-- play icon -->
+            <div class="songs-table-play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <!-- table name -->
+            <div class="table-name">ALL SONGS</div>
+          </div>
+         
+          <div class="songs-table">
+              <!-- <div id="track-0" class="song-row">
+                <div class="song-number">1</div>
+                <div class="song-title">
+                  <img class="song-title-img" src="/images/The_Night_We_Met.jpg" alt="">
+                  <div class="song-title-text">The Night we met</div>
+                </div>
+                <div class="song-artist">Lord Huron</div>
+                <div class="song-options">....</div>
+              </div> -->
+          </div>
+        </div>
+        <div class="player">
+          <div class="music-container">
+            <div class="music-cover">
+              <img
+                id="audio-cover"
+                src=""
+                alt=""
+              />
+              <div  class="music-info">
+                <div id="audio-title"></div>
+                <div id='artist-name'></div>
+                
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+              <div class="timer">
+                <div class="start-timer">0:00</div>
+                <div class="end-timer">0:00</div>
+              </div>
+            </div>
+            <div class="navigation-btn">
+              <div class="prev-btn action-btn">
+                <i class="fas fa-step-backward"></i>
+              </div>
+              <div class="play-btn action-btn">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <div class="next-btn action-btn">
+                <i class="fas fa-step-forward"></i>
+              </div>
+            </div>
+            <div class="volume-container">
+              <i class="fas fa-volume-up"></i>
+              <div class="volume-slider" style='display: none;' >
+                <div class="volume-fill"></div>   
+              </div>
+            </div>
+            <!-- <span id="audio"></span> -->
+            <audio controls type="audio/mpeg"
+              id="audio"
+              type='audio/mpeg'
+              src=""
+            ></audio>
+          </div>
+          
+         
+        </div>
+      </div>
+      <!-- <div class="playlist-modal-parent">
+        <div class='playlist-modal-top'>
+          <div class="playlist-name-container">
+            <i class="add-playlist-btn fas fa-plus-circle"></i>
+            <div id="playlist-name" contenteditable="true"  data-placeholder="Enter your playlist Name"></div>
+          </div>   
+        </div>
+        <div class="playlist-modal-bottom">
+          <div class="select-songs">Select Songs</div>
+          <div class="playlist-song-container">
+            <div class="playlist-row">
+              <div class="playlist-song-title">
+                <img class="song-title-img" src="/cover/2.jpg"alt="">
+                <div class="song-title-text">song</div>        
+              </div>
+              <div class="add-to-playlist">
+                <i id="track-0" class=" fas fa-plus-circle"></i>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+          <i class=" cancel-playlist far fa-window-close"></i>
+      </div> -->
+    </div>
+    <!-- playlist-options-modal -->
+    <!-- <div class="playlist-options-modal">
+      <div class="edit-playlist">Edit playlist</div>
+      <div class="delete-playlist">Delete playlist</div>
+    </div> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src='/song.js'></script>
+    <script src="/script.js" crossorigin="anonymous"></script>
+  </body>
+</html>
