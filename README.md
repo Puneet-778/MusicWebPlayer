@@ -8,3 +8,12 @@
  4) node getSongs.js
 
 
+# Functionalities in webplayer
+  1) Play/Pause, volume controls
+  2) Switch to any track 
+  3) Create playlist
+  4) Edit playlist
+  5) Delete Playlist
+  6) Local storage is used to retain playlist data
+
+
